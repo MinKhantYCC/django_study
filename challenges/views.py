@@ -52,7 +52,14 @@ def monthly_challenge(request, month):
     # month is identifier assigned in urls.py
     try:
         challenge_text = monthly_challenges[month]
-        challenge_text = f"<h1>{challenge_text}</h1>"
+        challenge_data = render(
+            request, 
+            "challenges/challenge.html", 
+            context={
+                "text": challenge_text,
+                "month": month.capitalize()
+            }
+        )
+        return HttpResponse(challenge_data)
     except:
         return HttpResponseNotFound("This month is not supported!")
-    return HttpResponse(challenge_text)
