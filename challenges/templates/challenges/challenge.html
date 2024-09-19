@@ -1,16 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{{ month | title }} Challenge</title>
-    </head>
-    <body>
-        <h1>{{ month | title }} Challenge</h1>
-        {% if text is not None %}
-            <h2>{{ text }}</h2>
-        {% else %}
-            <h2>There is no challenge for this month yet!</h2>
-        {% endif %}
-    </body>
-</html>
+{% extends "base.html" %}
+{% comment %} To inherit from base template {% endcomment %}
+
+{% block title %}
+    {% comment %} The following code will insert into `title` block of base.html {% endcomment %}
+    {{ month | title }} Challenge
+{% endblock %}
+
+{% block content %}
+    {% comment %} The following code will insert into `content` block of base.html {% endcomment %}
+    
+    {% comment %} The navigation snippet {% endcomment %}
+    {% comment %} you can add `with active_page="challenge"` at the end of `html"` to show the title of active page on the current page  {% endcomment %}
+    {% include "./includes/header.html" %} 
+
+    <h1>{{ month | title }} Challenge</h1>
+    {% if text is not None %}
+        <h2>{{ text }}</h2>
+    {% else %}
+        <h2>There is no challenge for this month yet!</h2>
+    {% endif %}
+{% endblock %}
