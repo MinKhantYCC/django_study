@@ -1,10 +1,16 @@
 {% extends "base.html" %}
+{% load static %}
+
+{% block css_block %}
+    <link rel="stylesheet" href="{% static "challenges/challenges.css" %}">
+{% endblock %}
 
 {% block title %}
     All Challenges
 {% endblock %}
 
 {% block content %}
+    {% include "challenges/includes/header.html" %}
     <ul>
         {% for month in months %}
         {% comment %} url tag is equal to reverse function. {% endcomment %}
