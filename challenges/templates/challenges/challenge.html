@@ -13,6 +13,7 @@
     {% comment %} you can add `with active_page="challenge"` at the end of `html"` to show the title of active page on the current page  {% endcomment %}
     {% include "./includes/header.html" %} 
 
+    {% comment %} month | title := title is Django filter to make month as title {% endcomment %}
     <h1>{{ month | title }} Challenge</h1>
     {% if text is not None %}
         <h2>{{ text }}</h2>
