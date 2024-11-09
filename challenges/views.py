@@ -7,19 +7,19 @@ from django.http import Http404
 
 # challenges
 monthly_challenges = {
-    "january": "Don't Eat Sugar",
-    "february": "Walk 1 hour",
-    "march": "Exercise 1 hour",
-    "april": "Study Django",
-    "may": "Don't Eat Sugar",
-    "june": "Walk 1 hour",
-    "july": "Exercise 1 hour",
-    "august": "Study Django",
-    "september": "Don't Eat Sugar",
-    "october": "Walk 1 hour",
-    "november": "Exercise 1 hour",
+    "January": "Don't Eat Sugar",
+    "February": "Walk 1 hour",
+    "March": "Exercise 1 hour",
+    "April": "Study Django",
+    "May": "Don't Eat Sugar",
+    "June": "Walk 1 hour",
+    "July": "Exercise 1 hour",
+    "August": "Study Django",
+    "September": "Don't Eat Sugar",
+    "October": "Walk 1 hour",
+    "November": "Exercise 1 hour",
     # "december": "Study Django",
-    "december": None,
+    "December": None,
 }
 
 # index page
